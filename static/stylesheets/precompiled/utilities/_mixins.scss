@@ -1,0 +1,7 @@
+@mixin generate-multiple-values ($from: 0, $to: 100, $property: "color", $unit: "px", $module: 1) {
+    @for $i from $from through $to {
+        @if ($i % $module==0) {
+            #{$property}#{$i}: #{$i}#{$unit}
+        }
+    }
+}

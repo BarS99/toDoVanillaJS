@@ -1,0 +1,40 @@
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5em;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary-color);
+        color: var(--secondary-text);
+        border-radius: 1em;
+        padding: 0.5em 1em;
+        cursor: pointer;
+
+        &>* {
+            pointer-events: none;
+        }
+
+        @media screen and (min-width: map-get($breakpoints, lg)) {
+            width: auto;
+        }
+
+        .caption {
+            display: none;
+
+            @media screen and (min-width: map-get($breakpoints, lg)) {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 0.5em;
+            }
+        }
+    }
+}

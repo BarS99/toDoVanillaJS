@@ -1,0 +1,12 @@
+.mainboard {
+    background-color: var(--white-color);
+    color: var(--white-text);
+    padding: 1.5em;
+
+    &__footer {
+        text-align: center;
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: center;
+    }
+}

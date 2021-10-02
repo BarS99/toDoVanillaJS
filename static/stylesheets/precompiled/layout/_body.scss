@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    scrollbar-color: hsl(0, 0%, 70%) var(--black-color);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: hsl(0, 0%, 70%);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--black-color);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: hsl(0, 0%, 30%);
+    }
+}

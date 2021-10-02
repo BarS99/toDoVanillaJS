@@ -1,0 +1,36 @@
+@use "sass:map";
+
+// SASS variables
+$breakpoints: (sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px);
+
+// CSS variables
+
+:root {
+    // hs definitions
+    --primary-hs: 220 3%;
+    --secondary-hs: 213 24%;
+    --contrast-hs: 177 40%;
+
+    // light
+    @include generate-multiple-values(0, 100, "--l-", "%", 5);
+
+    // colors
+    --primary-color: hsl(var(--primary-hs) var(--l-95));
+    --primary-text: hsl(var(--primary-hs) var(--l-5));
+
+    --secondary-color: hsl(var(--secondary-hs) var(--l-15));
+    --secondary-text: hsl(var(--secondary-hs) var(--l-100));
+
+    --contrast-color: hsl(var(--contrast-hs) var(--l-45));
+    --contrast-text: hsl(var(--contrast-hs) var(--l-100));
+
+    --white-color: hsl(250 100% var(--l-100));
+    --white-text: hsl(280 70% var(--l-0));
+
+    --black-color: hsl(280 70% var(--l-0));
+    --black-text: hsl(250 100% var(--l-100));
+}

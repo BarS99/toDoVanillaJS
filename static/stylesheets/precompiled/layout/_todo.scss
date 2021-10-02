@@ -1,0 +1,69 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        column-gap: 1em;
+    }
+
+    &__item+&__item {
+        margin-top: 0.8em;
+        padding-top: 0.8em;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    &__item-content {
+        display: flex;
+    }
+
+    &__item-check {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5em;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+        margin-top: -0.125em;
+        cursor: pointer;
+
+        &>* {
+            pointer-events: none;
+        }
+
+        &::before {
+            content: '\f0c8';
+            font-family: "Font Awesome 5 Free";
+        }
+
+    }
+
+    &__item--checked {
+        & .todo__item-check::before {
+            content: '\f14a';
+            font-family: "Font Awesome 5 Free";
+        }
+    }
+
+    &__item-actions {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        column-gap: 0.5em;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    &__item-btn {
+        text-align: center;
+        cursor: pointer;
+
+        &>* {
+            pointer-events: none;
+        }
+    }
+
+    &__item-btn i {
+        display: block;
+    }
+}
