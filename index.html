@@ -4,16 +4,165 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>ToDo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 
-    <script src="static/scripts/app.js"></script>
+    <link rel="stylesheet" href="static/stylesheets/vendors/normalize.css">
+    <link rel="stylesheet" href="static/stylesheets/styles.css">
+
+    <script type="module" src="static/scripts/app.js"></script>
 </head>
 
 <body>
+    <div class="layout-grid" id="layout-grid">
+        <aside class="layout-grid__col layout-grid__aside">
+            <div class="layout-grid__toggle">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <figure class="user-profile">
+                <picture class="user-profile__image">
+                    <img src="static/images/mike_tyson.jpg" alt="">
+                </picture>
+                <figcaption class="user-profile__caption">
+                    Mike Tyson
+                </figcaption>
+            </figure>
+            <nav class="nav-actions">
+                <div class="nav-actions__item">
+                    <i class="fas fa-print"></i>
+                    <span>Print</span>
+                </div>
+                <div class="nav-actions__item">
+                    <i class="fas fa-file-export"></i>
+                    <span>Export</span>
+                </div>
+                <div class="nav-actions__item">
+                    <i class="fas fa-file-import"></i>
+                    <span>Import</span>
+                </div>
+            </nav>
+        </aside>
+        <div class="layout-grid__col layout-grid__main">
+            <div class="container container--lg">
+                <header class="header">
+                    <div class="header__navigation">
+                        <div class="header__cell">
+                            <div class="header__item header__item-hamburger">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                        <div class="header__cell">
+                            <div class="header__item">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <nav class="nav-tabs">
+                    <div class="nav-tabs__item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tasks</span>
+                    </div>
+                    <div class="nav-tabs__item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Removed tasks</span>
+                    </div>
+                    <div class="nav-tabs__item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Completed tasks</span>
+                    </div>
+                    <div class="nav-tabs__item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </div>
+                </nav>
+                <main class="mainboard">
+                    <div class="toolbar">
+                        <div class="toolbar__item" id="todo__check-all">
+                            <i class="fas fa-check-square"></i>
+                            <span class="caption">Check all</span>
+                        </div>
+                        <div class="toolbar__item" id="todo__uncheck-all">
+                            <i class="far fa-square"></i>
+                            <span class="caption">Uncheck all</span>
+                        </div>
+                        <div class="toolbar__item" id="todo__remove-all">
+                            <i class="fas fa-trash"></i>
+                            <span class="caption">Remove checked</span>
+                        </div>
+                        <div class="toolbar__item" id="todo__complete-all">
+                            <i class="fas fa-check"></i>
+                            <span class="caption">Complete checked</span>
+                        </div>
+                    </div>
+                    <div class="todo" id="todo__list">
+                        <div class="todo__item">
+                            <div class="todo__item-content">
+                                <div class="todo__item-check"></div>
+                                <span>Breakfast at 8:00 am</span>
+                            </div>
+                            <div class="todo__item-actions">
+                                <div class="todo__item-btn todo__item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-complete">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-move-down">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-move-up">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="todo__item">
+                            <div class="todo__item-content">
+                                <div class="todo__item-check"></div>
+                                <span>Work at 9:00 am</span>
+                            </div>
+                            <div class="todo__item-actions">
+                                <div class="todo__item-btn todo__item-remove">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-complete">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-move-down">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <div class="todo__item-btn todo__item-move-up">
+                                    <i class="fas fa-arrow-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainboard__footer">
+                        <div class="toolbar__item" id="todo__item-add">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="footer__grid">
+                        <div class="footer__cell"></div>
+                        <div class="footer__cell">
+                            <address class="footer__item">
+                                Created by <a rel="author" href="#" class="footer__author">Bartlomiej Swiech</a>, ©
+                                2021
+                            </address>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
