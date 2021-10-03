@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    @media print {
+        display: none !important;
+    }
+
     &__item {
         width: 2.5em;
         height: 2.5em;

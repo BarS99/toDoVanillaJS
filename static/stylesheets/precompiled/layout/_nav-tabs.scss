@@ -12,6 +12,10 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    @media print {
+        display: none !important;
+    }
+
     &__item {
         background-color: var(--secondary-color);
         color: var(--secondary-text);

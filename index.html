@@ -34,17 +34,17 @@
                 </figcaption>
             </figure>
             <nav class="nav-actions">
-                <div class="nav-actions__item">
+                <div class="nav-actions__item" id="todo__print">
                     <i class="fas fa-print"></i>
                     <span>Print</span>
                 </div>
-                <div class="nav-actions__item">
+                <div class="nav-actions__item" id="todo__export">
                     <i class="fas fa-file-export"></i>
-                    <span>Export</span>
+                    <span>Export as JSON</span>
                 </div>
-                <div class="nav-actions__item">
+                <div class="nav-actions__item" id="todo__import">
                     <i class="fas fa-file-import"></i>
-                    <span>Import</span>
+                    <span>Import as JSON</span>
                 </div>
             </nav>
         </aside>
@@ -59,31 +59,33 @@
                         </div>
                         <div class="header__cell">
                             <div class="header__item">
-                                <i class="fas fa-search"></i>
+                                <div class="header__item-text">
+                                    ToDo List 2021
+                                </div>
                             </div>
                         </div>
                     </div>
                 </header>
                 <nav class="nav-tabs">
-                    <div class="nav-tabs__item">
+                    <div class="nav-tabs__item" id="todo__tasks">
                         <i class="fas fa-tasks"></i>
                         <span>Tasks</span>
                     </div>
-                    <div class="nav-tabs__item">
+                    <div class="nav-tabs__item" id="todo__tasks-removed">
                         <i class="fas fa-handshake"></i>
                         <span>Removed tasks</span>
                     </div>
-                    <div class="nav-tabs__item">
+                    <div class="nav-tabs__item" id="todo__tasks-completed">
                         <i class="fas fa-handshake"></i>
                         <span>Completed tasks</span>
                     </div>
-                    <div class="nav-tabs__item">
-                        <i class="fas fa-calendar"></i>
-                        <span>Calendar</span>
+                    <div class="nav-tabs__item" id="todo__tasks-reset">
+                        <i class="fas fa-redo"></i>
+                        <span>Reset tasks</span>
                     </div>
                 </nav>
                 <main class="mainboard">
-                    <div class="toolbar">
+                    <div class="toolbar" id="todo__toolbar">
                         <div class="toolbar__item" id="todo__check-all">
                             <i class="fas fa-check-square"></i>
                             <span class="caption">Check all</span>
@@ -101,49 +103,8 @@
                             <span class="caption">Complete checked</span>
                         </div>
                     </div>
-                    <div class="todo" id="todo__list">
-                        <div class="todo__item">
-                            <div class="todo__item-content">
-                                <div class="todo__item-check"></div>
-                                <span>Breakfast at 8:00 am</span>
-                            </div>
-                            <div class="todo__item-actions">
-                                <div class="todo__item-btn todo__item-remove">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-complete">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-move-down">
-                                    <i class="fas fa-arrow-down"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-move-up">
-                                    <i class="fas fa-arrow-up"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="todo__item">
-                            <div class="todo__item-content">
-                                <div class="todo__item-check"></div>
-                                <span>Work at 9:00 am</span>
-                            </div>
-                            <div class="todo__item-actions">
-                                <div class="todo__item-btn todo__item-remove">
-                                    <i class="fas fa-trash"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-complete">
-                                    <i class="fas fa-check"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-move-down">
-                                    <i class="fas fa-arrow-down"></i>
-                                </div>
-                                <div class="todo__item-btn todo__item-move-up">
-                                    <i class="fas fa-arrow-up"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mainboard__footer">
+                    <div class="todo" id="todo__list"></div>
+                    <div class="mainboard__footer" id="todo__footer">
                         <div class="toolbar__item" id="todo__item-add">
                             <i class="fas fa-plus"></i>
                         </div>

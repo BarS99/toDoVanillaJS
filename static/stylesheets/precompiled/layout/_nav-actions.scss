@@ -5,11 +5,16 @@
     &__item {
         padding: 0.8em 0;
         font-size: 1.25rem;
+        cursor: pointer;
 
         & i {
             width: 1.6em;
             display: inline-block;
             opacity: 0.8;
+        }
+
+        &>* {
+            pointer-events: none;
         }
     }
 }
